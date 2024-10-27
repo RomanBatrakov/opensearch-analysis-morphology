@@ -52,7 +52,7 @@ validateNebulaPom.enabled = false
 
 buildscript {
     ext {
-        opensearch_version = System.getProperty("opensearch.version", "2.4.0")
+        opensearch_version = System.getProperty("opensearch.version", "2.17.1")
     }
 
     repositories {
@@ -68,6 +68,7 @@ buildscript {
 }
 
 dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.17.2'
     implementation files('./libs/english-1.5.jar')
     implementation files('./libs/morph-1.5.jar')
     implementation files('./libs/russian-1.5.jar')

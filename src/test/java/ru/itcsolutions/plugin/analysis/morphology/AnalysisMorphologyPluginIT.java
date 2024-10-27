@@ -30,7 +30,7 @@ public class AnalysisMorphologyPluginIT extends OpenSearchIntegTestCase {
     }
 
     public void testPluginInstalled() throws IOException {
-        Response response = createRestClient().performRequest(new Request("GET", "/_cat/plugins"));
+        Response response = getRestClient().performRequest(new Request("GET", "/_cat/plugins"));
         String body = EntityUtils.toString(response.getEntity());
 
         logger.info("response body: {}", body);
